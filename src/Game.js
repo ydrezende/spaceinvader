@@ -160,7 +160,7 @@ class Game {
     }
 
     playSound(track) {
-        let audio = new Audio("../sounds/" + track + ".mp3");
+        let audio = new Audio("./sounds/" + track + ".mp3");
         audio.volume = 0.3;
         audio.play();
     }
