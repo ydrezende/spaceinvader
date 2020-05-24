@@ -1,0 +1,50 @@
+#canvas {
+    position: relative;
+    width: 40%;
+    height: 80vh;
+    margin: .5% auto 0% auto;
+    display: flex;
+    border: rgba(23, 7, 26, 0.26) solid 2px;
+    border-radius: 30px;
+    background-image: url("../img/space.jpg");
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+#player-container {
+    position: absolute;
+    top: calc(577-100);
+}
+
+#player {}
+
+.life {}
+
+#player-life {
+    height: 1vh;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(123, 255, 47);
+    box-shadow: 0 0 5px rgb(193, 255, 47), 0 0 2px #fcff61;
+}
+
+.polit {
+    position: absolute;
+    width: 7px;
+    height: 3vh;
+    border-radius: 5px;
+    background-color: rgb(245, 236, 116);
+    box-shadow: 0 0 10px #ff0000, 0 0 5px #fcff61;
+}
+
+.anime {
+    position: absolute;
+}
+
+.animeLife {
+    height: 1vh;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(123, 255, 47);
+}
