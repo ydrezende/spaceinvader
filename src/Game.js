@@ -173,7 +173,7 @@ class Game {
         if (this.animesDistroyed.length === this.levels.animesToPassLevel) {
             //console.log('next level')
             this.levels.isWon = true
-            this.levels.animesToPassLevel += 10
+            this.levels.animesToPassLevel += 3
             this.animeFrequency -= 1
 
             this.levels.setLevel()
