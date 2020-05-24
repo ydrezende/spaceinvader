@@ -77,7 +77,7 @@ class Menu {
     }
 
     printLevels(level) {
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 14; i++) {
             if (i < level) {
                 let markup = '<img class="level level-on" src="./img/star.png" alt="level-star">'
                 $('#level-over-levels').append(markup)
