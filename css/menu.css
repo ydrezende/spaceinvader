@@ -1,6 +1,6 @@
 #menu {
   width: 30%;
-  height: 65vh;
+  height: 68vh;
   position: absolute;
   bottom: 15vh;
   display: flex;
@@ -127,7 +127,7 @@
 #level-over-levels {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 1%;
+  margin-bottom: 0;
   border-radius: 0;
 }
 
