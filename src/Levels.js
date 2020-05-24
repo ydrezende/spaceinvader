@@ -1,6 +1,6 @@
 class Levles {
     constructor() {
-        this.levels = 7
+        this.levels = 14
         this.level = 0
         this.addLevle()
         this.animesToPassLevel = 10
