@@ -6,7 +6,7 @@
     display: flex;
     border: rgba(23, 7, 26, 0.26) solid 2px;
     border-radius: 30px;
-    background-image: url("../img/space.jpg");
+    background-image: url("./img/space.jpg");
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 
