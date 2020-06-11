@@ -15,20 +15,17 @@ class Game {
         this.playerDeath = 0
         this.isLevelOver = false;
         this.isGameOver = false;
+        this.bShooting = false; // Intention to shoot
 
         document.addEventListener("keydown", K.fn);
         document.addEventListener("keyup", K.fn);
-        document.addEventListener("keypress", (e) => {
-            if (!this.isGameOver && !this.isLevelOver) {
-                this.playSound("laser-gun-5");
-                this.politId = this.polits.length;
-                this.polits[this.politId] = new Polit(
-                    this.politId,
-                    this.player.x + 45,
-                    this.player.y
-                );
-                this.polits[this.politId].makePolit(this.politId);
-            }
+        document.addEventListener("keyup", (e) => {
+            //Indicates the Spacebar was released and there is intention to stop shooting
+            if(e.code == "Space") this.bShooting = false;
+        });
+        document.addEventListener("keydown", (e) => {
+            //Indicates the Spacebar was pressed and there is intention to start shooting
+            if(e.code == "Space") this.bShooting = true;
         });
     }
 
@@ -264,7 +261,25 @@ class Game {
             this.playSound("space2");
         }
         this.moveAnimes();
-        this.gameOver();
+        this.gameOver();      
+        
+        // Checks 8 frames interval to shoot again
+        if (this.time % 8 === 0) {
+            this.shoot();
+        }
+    }
+
+    shoot() {
+        if (!this.isGameOver && !this.isLevelOver && this.bShooting) {
+            this.playSound("laser-gun-5");
+            this.politId = this.polits.length;
+            this.polits[this.politId] = new Polit(
+                this.politId,
+                this.player.x + 45,
+                this.player.y
+            );
+            this.polits[this.politId].makePolit(this.politId);
+        }
     }
 
     run() {
